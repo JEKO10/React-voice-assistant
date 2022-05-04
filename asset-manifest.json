@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Voice-assistant/static/css/main.31d6cfe0.css",
+    "main.js": "/Voice-assistant/static/js/main.ebb1a96d.js",
+    "static/js/787.8d3553b5.chunk.js": "/Voice-assistant/static/js/787.8d3553b5.chunk.js",
+    "index.html": "/Voice-assistant/index.html",
+    "main.ebb1a96d.js.map": "/Voice-assistant/static/js/main.ebb1a96d.js.map",
+    "787.8d3553b5.chunk.js.map": "/Voice-assistant/static/js/787.8d3553b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.ebb1a96d.js"
+  ]
+}
