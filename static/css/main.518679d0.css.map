@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.518679d0.css","mappings":"AAAA,EAGE,sBAFA,SACA,SACA,CAGF,KACE","sources":["sass/index.scss"],"sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  scroll-behavior: smooth;\r\n}\r\n"],"names":[],"sourceRoot":""}
