@@ -1,20 +1,18 @@
-import alanBtn from "@alan-ai/alan-sdk-web";
-import { useEffect } from "react";
+import { useState } from "react";
+import useAlan from "./useAlan";
 
 function App() {
-  const key =
-    "6021b8d3aee085781766709cc7c80efe2e956eca572e1d8b807a3e2338fdd0dc/stage";
+  const [weatherData, setWeatherData] = useState([]);
 
-  useEffect(() => {
-    alanBtn({
-      key,
-      onCommand: ({ command }) => {
-        if (command === "testCommand") {
-          alert("code");
-        }
-      },
-    });
-  }, []);
+  const fetchWeather = async (location) => {
+    const response = await fetch(
+      `https://newsapi.org/v2/top-headlines?sources=${location}&apiKey=b19cbd60c8e94a4d990a4ab78de5e958`
+    );
+    const data = await response.json();
+    setWeatherData(data);
+  };
+
+  useAlan({ fetchWeather });
 
   return <></>;
 }
