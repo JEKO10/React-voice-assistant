@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 
-export default function useAlan({ fetchTranslate }) {
+export default function useAlan({ fetchLanguages }) {
   const [translate, setTranslate] = useState("");
 
   const key =
@@ -14,13 +14,11 @@ export default function useAlan({ fetchTranslate }) {
       alanBtnInstance.current = alanBtn({
         key,
         onCommand: async (data) => {
-          if (data.location) console.log(data.location);
-          setTranslate(data.location);
+          if (data.voice) console.log(data.voice);
+          setTranslate(data.voice);
         },
       });
     }
-
-    console.log(translate);
   }, [translate]);
 
   return null;
