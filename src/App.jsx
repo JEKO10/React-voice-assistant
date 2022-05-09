@@ -4,6 +4,8 @@ const axios = require("axios").default;
 
 function App() {
   const [lang, setLang] = useState([]);
+  const [userInput, setUserInput] = useState("");
+  const [translateValue, setTranslateValue] = useState("");
 
   const fetchLanguages = async () => {
     axios
@@ -34,6 +36,15 @@ function App() {
             );
           })}
         </select>
+        <input
+          type="text"
+          onChange={(e) => {
+            setUserInput(e.target.value);
+            console.log(userInput);
+          }}
+        />
+      </div>
+      <div>
         To:
         <select>
           {lang.map((option) => {
@@ -44,6 +55,13 @@ function App() {
             );
           })}
         </select>
+        <input
+          type="text"
+          onChange={(e) => {
+            setTranslateValue(e.target.value);
+            console.log(translateValue);
+          }}
+        />
       </div>
     </>
   );
