@@ -6,6 +6,8 @@ function App() {
   const [lang, setLang] = useState([]);
   const [userInput, setUserInput] = useState("");
   const [translateValue, setTranslateValue] = useState("");
+  const [from, setFrom] = useState("en");
+  const [to, setTo] = useState("en");
 
   const fetchLanguages = async () => {
     axios
@@ -26,8 +28,12 @@ function App() {
   return (
     <>
       <div>
-        From:
-        <select>
+        From ({from}):
+        <select
+          onChange={(e) => {
+            setFrom(e.target.value);
+          }}
+        >
           {lang.map((option) => {
             return (
               <option value={option.code} key={option.code}>
@@ -45,8 +51,12 @@ function App() {
         />
       </div>
       <div>
-        To:
-        <select>
+        To ({to}) :
+        <select
+          onChange={(e) => {
+            setTo(e.target.value);
+          }}
+        >
           {lang.map((option) => {
             return (
               <option value={option.code} key={option.code}>
