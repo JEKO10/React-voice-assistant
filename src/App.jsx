@@ -19,6 +19,26 @@ function App() {
       });
   };
 
+  const translate = () => {
+    const params = new URLSearchParams();
+    params.append("q", userInput);
+    params.append("source", from);
+    params.append("target", to);
+    params.append("api_key", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx");
+
+    axios
+      .post("https://libretranslate.de/translate", params, {
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+        setTranslateValue(res.data.translatedText);
+      });
+  };
+
   useAlan({ fetchLanguages });
 
   useEffect(() => {
@@ -46,7 +66,6 @@ function App() {
           type="text"
           onChange={(e) => {
             setUserInput(e.target.value);
-            console.log(userInput);
           }}
         />
       </div>
@@ -65,14 +84,9 @@ function App() {
             );
           })}
         </select>
-        <input
-          type="text"
-          onChange={(e) => {
-            setTranslateValue(e.target.value);
-            console.log(translateValue);
-          }}
-        />
+        <input type="text" defaultValue={translateValue} />
       </div>
+      <button onClick={translate}>Translate</button>
     </>
   );
 }
