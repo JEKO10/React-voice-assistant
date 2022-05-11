@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bb79f046cd8b2805f6f2",
+    "revision": "5aeb8ff0bf84940fa896",
     "url": "/Voice-assistant/static/css/main.fb9c608f.chunk.css"
   },
   {
-    "revision": "bb79f046cd8b2805f6f2",
-    "url": "/Voice-assistant/static/js/main.bb79f046.chunk.js"
+    "revision": "5aeb8ff0bf84940fa896",
+    "url": "/Voice-assistant/static/js/main.5aeb8ff0.chunk.js"
   },
   {
     "revision": "4422e644433f4a61be16",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/Voice-assistant/static/js/runtime~main.422e7d41.js"
   },
   {
-    "revision": "7dbb0d6482c9522573073d7b483705ef",
+    "revision": "fbdaeda9e36904cd73f50e8f65f6f668",
     "url": "/Voice-assistant/index.html"
   }
 ];
