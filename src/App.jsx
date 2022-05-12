@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import useAlan from "./useAlan";
+import { useGlobalContext } from "./context";
 const axios = require("axios").default;
 
 function App() {
+  const { useAlan, translate } = useGlobalContext();
+
   const [lang, setLang] = useState([]);
-  const [userInput, setUserInput] = useState("");
   const [translateValue, setTranslateValue] = useState("");
   const [from, setFrom] = useState("en");
   const [to, setTo] = useState("en");
@@ -19,9 +20,9 @@ function App() {
       });
   };
 
-  const translate = () => {
+  const translateInput = () => {
     const params = new URLSearchParams();
-    params.append("q", userInput);
+    params.append("q", translate);
     params.append("source", from);
     params.append("target", to);
     params.append("api_key", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx");
@@ -34,7 +35,6 @@ function App() {
         },
       })
       .then((res) => {
-        console.log(res.data);
         setTranslateValue(res.data.translatedText);
       });
   };
@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       <div>
-        From ({from}):
+        From ({from}):{" "}
         <select
           onChange={(e) => {
             setFrom(e.target.value);
@@ -62,15 +62,10 @@ function App() {
             );
           })}
         </select>
-        <input
-          type="text"
-          onChange={(e) => {
-            setUserInput(e.target.value);
-          }}
-        />
+        <input type="text" defaultValue={translate} />
       </div>
       <div>
-        To ({to}) :
+        To ({to}):{" "}
         <select
           onChange={(e) => {
             setTo(e.target.value);
@@ -86,7 +81,7 @@ function App() {
         </select>
         <input type="text" defaultValue={translateValue} />
       </div>
-      <button onClick={translate}>Translate</button>
+      <button onClick={translateInput}>Translate</button>
     </>
   );
 }
