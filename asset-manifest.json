@@ -1,15 +1,15 @@
 {
-  "main.css": "/Voice-assistant/static/css/main.fb9c608f.chunk.css",
-  "main.js": "/Voice-assistant/static/js/main.5e889921.chunk.js",
-  "main.js.map": "/Voice-assistant/static/js/main.5e889921.chunk.js.map",
-  "static/js/1.4422e644.chunk.js": "/Voice-assistant/static/js/1.4422e644.chunk.js",
-  "static/js/1.4422e644.chunk.js.map": "/Voice-assistant/static/js/1.4422e644.chunk.js.map",
-  "static/js/2.9118b342.chunk.js": "/Voice-assistant/static/js/2.9118b342.chunk.js",
-  "static/js/2.9118b342.chunk.js.map": "/Voice-assistant/static/js/2.9118b342.chunk.js.map",
-  "runtime~main.js": "/Voice-assistant/static/js/runtime~main.422e7d41.js",
-  "runtime~main.js.map": "/Voice-assistant/static/js/runtime~main.422e7d41.js.map",
-  "static/css/main.fb9c608f.chunk.css.map": "/Voice-assistant/static/css/main.fb9c608f.chunk.css.map",
-  "index.html": "/Voice-assistant/index.html",
-  "precache-manifest.01f2739ab85416daed4005aad413f40a.js": "/Voice-assistant/precache-manifest.01f2739ab85416daed4005aad413f40a.js",
-  "service-worker.js": "/Voice-assistant/service-worker.js"
+  "files": {
+    "main.css": "/Voice-assistant/static/css/main.74821bba.css",
+    "main.js": "/Voice-assistant/static/js/main.4a9b3500.js",
+    "static/js/787.8d3553b5.chunk.js": "/Voice-assistant/static/js/787.8d3553b5.chunk.js",
+    "index.html": "/Voice-assistant/index.html",
+    "main.74821bba.css.map": "/Voice-assistant/static/css/main.74821bba.css.map",
+    "main.4a9b3500.js.map": "/Voice-assistant/static/js/main.4a9b3500.js.map",
+    "787.8d3553b5.chunk.js.map": "/Voice-assistant/static/js/787.8d3553b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74821bba.css",
+    "static/js/main.4a9b3500.js"
+  ]
 }
