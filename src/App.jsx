@@ -6,6 +6,7 @@ function App() {
   const { useAlan, translate } = useGlobalContext();
 
   const [lang, setLang] = useState([]);
+  const [userInput, setUserInput] = useState("");
   const [translateValue, setTranslateValue] = useState("");
   const [from, setFrom] = useState("en");
   const [to, setTo] = useState("en");
@@ -35,6 +36,7 @@ function App() {
         },
       })
       .then((res) => {
+        console.log(res.data);
         setTranslateValue(res.data.translatedText);
       });
   };
@@ -46,43 +48,45 @@ function App() {
   }, []);
 
   return (
-    <>
+    <section className="translator">
       <div>
-        From ({from}):{" "}
-        <select
-          onChange={(e) => {
-            setFrom(e.target.value);
-          }}
-        >
-          {lang.map((option) => {
-            return (
-              <option value={option.code} key={option.code}>
-                {option.name}
-              </option>
-            );
-          })}
-        </select>
-        <input type="text" defaultValue={translate} />
-      </div>
-      <div>
-        To ({to}):{" "}
-        <select
-          onChange={(e) => {
-            setTo(e.target.value);
-          }}
-        >
-          {lang.map((option) => {
-            return (
-              <option value={option.code} key={option.code}>
-                {option.name}
-              </option>
-            );
-          })}
-        </select>
-        <input type="text" defaultValue={translateValue} />
+        <div>
+          <p>From ({from}): </p>
+          <select
+            onChange={(e) => {
+              setFrom(e.target.value);
+            }}
+          >
+            {lang.map((option) => {
+              return (
+                <option value={option.code} key={option.code}>
+                  {option.name}
+                </option>
+              );
+            })}
+          </select>
+          <textarea type="text" defaultValue={translate} />
+        </div>
+        <div>
+          <p>To ({to}): </p>
+          <select
+            onChange={(e) => {
+              setTo(e.target.value);
+            }}
+          >
+            {lang.map((option) => {
+              return (
+                <option value={option.code} key={option.code}>
+                  {option.name}
+                </option>
+              );
+            })}
+          </select>
+          <textarea type="text" defaultValue={translateValue} />
+        </div>
       </div>
       <button onClick={translateInput}>Translate</button>
-    </>
+    </section>
   );
 }
 
