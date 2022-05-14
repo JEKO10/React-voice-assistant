@@ -3,10 +3,9 @@ import { useGlobalContext } from "./context";
 const axios = require("axios").default;
 
 function App() {
-  const { useAlan, translate } = useGlobalContext();
+  const { useAlan, translate, setTranslate } = useGlobalContext();
 
   const [lang, setLang] = useState([]);
-  const [userInput, setUserInput] = useState("");
   const [translateValue, setTranslateValue] = useState("");
   const [from, setFrom] = useState("en");
   const [to, setTo] = useState("en");
@@ -65,7 +64,13 @@ function App() {
               );
             })}
           </select>
-          <textarea type="text" defaultValue={translate} />
+          <textarea
+            type="text"
+            value={translate}
+            onChange={(e) => {
+              setTranslate(e.target.value);
+            }}
+          />
         </div>
         <div>
           <p>To ({to}): </p>

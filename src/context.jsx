@@ -24,10 +24,8 @@ function AppProvider({ children }) {
     }, [translate]);
   };
 
-  console.log(translate);
-
   return (
-    <AppContext.Provider value={{ useAlan, translate }}>
+    <AppContext.Provider value={{ useAlan, translate, setTranslate }}>
       {children}
     </AppContext.Provider>
   );
