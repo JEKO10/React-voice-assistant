@@ -1,0 +1,13 @@
+@include mediaMedium {
+  .translator {
+    margin: 2rem auto;
+
+    > div {
+      flex-direction: column;
+
+      > div {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
