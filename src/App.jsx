@@ -47,51 +47,56 @@ function App() {
   }, []);
 
   return (
-    <section className="translator">
-      <div>
+    <>
+      <h1>Translator</h1>
+      <h2>Try saying "translate" then your sentence</h2>
+      <section className="translator">
         <div>
-          <p>From ({from}): </p>
-          <select
-            onChange={(e) => {
-              setFrom(e.target.value);
-            }}
-          >
-            {lang.map((option) => {
-              return (
-                <option value={option.code} key={option.code}>
-                  {option.name}
-                </option>
-              );
-            })}
-          </select>
-          <textarea
-            type="text"
-            value={translate}
-            onChange={(e) => {
-              setTranslate(e.target.value);
-            }}
-          />
+          <div>
+            <p>From ({from}): </p>
+            <select
+              onChange={(e) => {
+                setFrom(e.target.value);
+              }}
+            >
+              {lang.map((option) => {
+                return (
+                  <option value={option.code} key={option.code}>
+                    {option.name}
+                  </option>
+                );
+              })}
+            </select>
+            <textarea
+              type="text"
+              value={translate}
+              onChange={(e) => {
+                setTranslate(e.target.value);
+              }}
+              placeholder="Say 'translate' *your sentence*"
+            />
+          </div>
+          <div>
+            <p>To ({to}): </p>
+            <select
+              onChange={(e) => {
+                setTo(e.target.value);
+              }}
+            >
+              {lang.map((option) => {
+                return (
+                  <option value={option.code} key={option.code}>
+                    {option.name}
+                  </option>
+                );
+              })}
+            </select>
+            <textarea type="text" defaultValue={translateValue} />
+          </div>
         </div>
-        <div>
-          <p>To ({to}): </p>
-          <select
-            onChange={(e) => {
-              setTo(e.target.value);
-            }}
-          >
-            {lang.map((option) => {
-              return (
-                <option value={option.code} key={option.code}>
-                  {option.name}
-                </option>
-              );
-            })}
-          </select>
-          <textarea type="text" defaultValue={translateValue} />
-        </div>
-      </div>
-      <button onClick={translateInput}>Translate</button>
-    </section>
+        <button onClick={translateInput}>Translate</button>
+      </section>
+    </>
   );
 }
 

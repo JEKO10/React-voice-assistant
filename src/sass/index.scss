@@ -7,3 +7,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+h1 {
+  margin: 1rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: $primaryFont;
+  padding: 0 20px;
+}

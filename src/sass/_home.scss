@@ -1,9 +1,8 @@
 .translator {
-  @include flex(center, flex-start);
+  @include flex(flex-start, flex-start);
   flex-direction: column;
-  min-height: 95vh;
   max-width: 80vw;
-  margin: 0 auto;
+  margin: 4rem auto;
   font-family: $primaryFont;
 
   > div {

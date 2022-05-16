@@ -7,6 +7,15 @@
 
       > div {
         margin: 1rem 0;
+
+        textarea {
+          padding: 10px;
+        }
+
+        textarea,
+        select {
+          width: 100%;
+        }
       }
     }
   }
