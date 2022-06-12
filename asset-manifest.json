@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Voice-assistant/static/css/main.160c18f5.css",
-    "main.js": "/Voice-assistant/static/js/main.23f3183c.js",
-    "static/js/787.8d3553b5.chunk.js": "/Voice-assistant/static/js/787.8d3553b5.chunk.js",
-    "index.html": "/Voice-assistant/index.html",
-    "main.160c18f5.css.map": "/Voice-assistant/static/css/main.160c18f5.css.map",
-    "main.23f3183c.js.map": "/Voice-assistant/static/js/main.23f3183c.js.map",
-    "787.8d3553b5.chunk.js.map": "/Voice-assistant/static/js/787.8d3553b5.chunk.js.map"
+    "main.css": "/Voice-translator/static/css/main.160c18f5.css",
+    "main.js": "/Voice-translator/static/js/main.7da8b4f8.js",
+    "static/js/787.8d3553b5.chunk.js": "/Voice-translator/static/js/787.8d3553b5.chunk.js",
+    "index.html": "/Voice-translator/index.html",
+    "main.160c18f5.css.map": "/Voice-translator/static/css/main.160c18f5.css.map",
+    "main.7da8b4f8.js.map": "/Voice-translator/static/js/main.7da8b4f8.js.map",
+    "787.8d3553b5.chunk.js.map": "/Voice-translator/static/js/787.8d3553b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.160c18f5.css",
-    "static/js/main.23f3183c.js"
+    "static/js/main.7da8b4f8.js"
   ]
 }
