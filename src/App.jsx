@@ -4,7 +4,6 @@ const axios = require("axios").default;
 
 function App() {
   const { useAlan, translate, setTranslate } = useGlobalContext();
-
   const [lang, setLang] = useState([]);
   const [translateValue, setTranslateValue] = useState("");
   const [from, setFrom] = useState("en");
