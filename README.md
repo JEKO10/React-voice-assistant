@@ -13,7 +13,7 @@
 
 ## Project task
 
-I created text and voice translator using React and Alan AI.
+I created text and voice translator using React, Alan AI and Libretranslate API.
 
 ## Project overview
 
